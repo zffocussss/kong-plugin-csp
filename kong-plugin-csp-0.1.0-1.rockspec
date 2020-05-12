@@ -5,11 +5,10 @@ source = {
 }
 description = {
    homepage = "https://github.com/zffocussss/kong-plugin-csp",
-   license = "*** please specify a license ***",
    license = "MIT"
 }
-dependencies {
-   "lua >= 5.1, < 5.4"
+dependencies = {
+   "lua >= 5.1"
 }
 build = {
    type = "builtin",
