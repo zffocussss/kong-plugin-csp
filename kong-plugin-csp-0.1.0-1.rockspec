@@ -6,7 +6,7 @@ version = "0.1.0-1"     -- renumber, must match the info in the filename of this
 -- supported_platforms = {"linux", "macosx"}
 
 source = {
-     url = "git://github.com/zffocus/kong-plugin-scp.git"
+     url = "git://github.com/zffocussss/kong-plugin-scp.git"
      -- tag = "0.1-1"
 }
 
