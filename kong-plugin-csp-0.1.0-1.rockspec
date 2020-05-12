@@ -7,7 +7,7 @@ version = "0.1.0-1"     -- renumber, must match the info in the filename of this
 
 source = {
      url = "git://github.com/zffocussss/kong-plugin-scp",
-     tag = "0.1-1"
+     --tag = "0.1-1"
 }
 
 description = {
