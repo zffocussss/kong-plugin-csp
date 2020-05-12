@@ -1,29 +1,19 @@
 package = "kong-plugin-csp"
-
-version = "0.1.0-1"     -- renumber, must match the info in the filename of this rockspec!
-                      -- The version '0.1' is the source code version, the trailing '1' is the version of this rockspec.
-
--- supported_platforms = {"linux", "macosx"}
-
+version = "0.1.0-1"
 source = {
-     url = "git://github.com/zffocussss/kong-plugin-scp",
-     --tag = "0.1-1"
+   url = "git+https://github.com/zffocussss/kong-plugin-csp.git"
 }
-
 description = {
-  summary = "A Kong custom plugin, that allows handle CSP.",
-  license = "Apache 2.0"
+   homepage = "https://github.com/zffocussss/kong-plugin-csp",
+   license = "*** please specify a license ***",
+   license = "MIT"
 }
-
-dependencies = {
-  "lua >= 5.1"
-  -- If you depend on other rocks, add them here
+dependencies {
+   "lua >= 5.1, < 5.4"
 }
-
 build = {
-  type = "builtin",
-  modules = {
-    ["kong.plugins.kong-plugin-csp.handler"] = "src/handler.lua",
-  }
+   type = "builtin",
+   modules = {
+      handler = "src/handler.lua"
+   }
 }
-
