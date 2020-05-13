@@ -30,7 +30,7 @@ function plugin:new()
 end
 
 -- Executed when all response headers bytes have been received from the upstream service
-function plugin:header_filter()
+function plugin:header_filter(conf)
 -- add reponse header Content-Security-Policy
   csp_value = string.format("default-src \'self\'; style-src: \'self\' \'nonce-%d\';",randomString)
   kong.response.add_header("Content-Security-Policy", csp_value)
@@ -38,7 +38,7 @@ function plugin:header_filter()
 end
 
 -- Executed for each chunk of the response body received from the upstream service
-function plugin:body_filter()
+function plugin:body_filter(conf)
  -- local ctx = ngx.ctx
  -- if ctx.buffers == nil then
  --    ctx.buffers = {}
