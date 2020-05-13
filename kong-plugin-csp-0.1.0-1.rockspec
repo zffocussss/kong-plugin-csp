@@ -13,6 +13,7 @@ dependencies = {
 build = {
    type = "builtin",
    modules = {
-      ["kong.plugins.kong-plugin-scp.handler"] = "src/handler.lua"
+      ["kong.plugins.kong-plugin-scp.handler"] = "src/handler.lua",
+      ["kong.plugins.kong-plugin-scp.schema"] = "src/schema.lua"
    }
 }
