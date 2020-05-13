@@ -65,8 +65,8 @@ function plugin:body_filter()
  -- assert(ctx.nbuffers ~= 0, "buffer must not be empty")
 -- modify content of header meta
   local html_body = kong.service.response.get_raw_body()
-  local meta = string.format("<meta property=\"csp-nonce\" content=\"nonce-\"%s />$1",randomString)
-  local new_html_body, n, err = ngx.re.gsub(html_body, "(</head>)", meta)
+  local meta = string.format("<meta property=\"csp-nonce\" content=\"nonce-\"%s /></head>",randomString)
+  local new_html_body, n = string.gsub(html_body,"</head>",meta)
 --  ngx.arg[1] = new_html_body .. table.concat(ngx.ctx.buffers)
   ngx.arg[1] = new_html_body
 
