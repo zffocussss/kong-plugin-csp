@@ -1,19 +1,20 @@
 local typedefs = require "kong.db.schema.typedefs" 
 return {
---   name = "kong-plugin-csp",
-   no_consumer = true,
+   name = "kong-plugin-csp",
    fields = {
---     {
---       no_consumer = true
---     },
---     {
-     abc = {type = "string", required = true}  
---     }
-      
+     {
+       consumer = typedefs.no_consumer
+     },
+     {
+       config = {
+         type = "record",
+         fields = {
+           abc = {
+             type = "string",
+             required = false,
+           },
+         },
+       },
+     },
   },
-
-  self_check = function(schema, plugin_t, dao, is_updating)
-    -- perform any custom verification
-    return true
-  end
 }
