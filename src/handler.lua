@@ -34,6 +34,8 @@ function plugin:header_filter(config)
 -- add reponse header Content-Security-Policy
   csp_value = string.format("default-src \'self\'; style-src: \'self\' \'nonce-%d\';",randomString)
   kong.response.add_header("Content-Security-Policy", csp_value)
+  csp = kong.response.get_header("Content-Security-Policy")
+  ngx.say("csp response header: "..csp)
 
 end
 
@@ -69,6 +71,7 @@ function plugin:body_filter(config)
   local new_html_body, n = string.gsub(html_body,"</head>",meta)
 --  ngx.arg[1] = new_html_body .. table.concat(ngx.ctx.buffers)
   ngx.arg[1] = new_html_body
+  ngx.say("I am here")
 
 end
 
