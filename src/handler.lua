@@ -26,7 +26,7 @@ plugin.VERSION  = "0.1.0"
 
 -- constructor
 function plugin:new()
-  plugin.super.new(self, "csp")
+  plugin.super.new(self, "kong-plugin-csp")
 end
 
 -- Executed when all response headers bytes have been received from the upstream service
