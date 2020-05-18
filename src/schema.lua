@@ -15,8 +15,8 @@ local test_para = {
 
 return {
    name = "kong-plugin-csp",
-    fields = {
-
+   fields = {
+      test = {type = "string", required = true}   
 --    { consumer = typedefs.no_consumer },
 --    { protocols = typedefs.protocols_http },
 --    { config = {
