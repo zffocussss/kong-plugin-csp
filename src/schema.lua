@@ -16,14 +16,15 @@ local test_para = {
 return {
    name = "kong-plugin-csp",
     fields = {
-    { consumer = typedefs.no_consumer },
-    { protocols = typedefs.protocols_http },
-    { config = {
-        type = "record",
-        fields = {
-          test = test_para,   
-        },
-      },
-    },
+
+--    { consumer = typedefs.no_consumer },
+--    { protocols = typedefs.protocols_http },
+--    { config = {
+--        type = "record",
+--        fields = {
+--          test = test_para,   
+--        },
+--      },
+--    },
   },
-}
+}c  
