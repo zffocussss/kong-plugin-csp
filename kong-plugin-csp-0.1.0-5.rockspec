@@ -1,5 +1,5 @@
 package = "kong-plugin-csp"
-version = "0.1.0-4"
+version = "0.1.0-5"
 source = {
    url = "git+https://github.com/zffocussss/kong-plugin-csp.git"
 }
