@@ -14,7 +14,8 @@ local test_para = {
 }
 
 return {
-   name = "kong-plugin-csp",
+--   name = "kong-plugin-csp",
+   no_consumer = true,
    fields = {
       test = {type = "string", required = true}   
 --    { consumer = typedefs.no_consumer },
